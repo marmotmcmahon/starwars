@@ -1,0 +1,107 @@
+/* Flex Tables */
+
+.flextable {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 3em 0;
+  padding: 0;
+}
+
+.flextable-cell {
+  box-sizing: border-box;
+  flex-grow: 1;
+  width: 100%;
+  padding: 0.7em 1.3em;
+  overflow: hidden;
+  list-style: none;
+  border: solid 4px #334E58;
+  position: relative;
+  background: #e1e1e1;
+    background:
+      linear-gradient(135deg, transparent 5px, #e1e1e1 0) top left,
+      linear-gradient(225deg, transparent 5px, #e1e1e1 0) top right,
+      linear-gradient(315deg, transparent 5px, #e1e1e1 0) bottom right,
+      linear-gradient(45deg,  transparent 5px, #e1e1e1 0) bottom left;
+    /*Note: Increased background-size from 50 to 50.5 because Chrome's downward rounding yields gaps;*/
+    background-size: 50.5% 50.5%;
+    background-repeat: no-repeat;
+}
+
+.title-cell {
+  background:
+      linear-gradient(135deg, transparent 5px, #737373 0) top left,
+      linear-gradient(225deg, transparent 5px, #737373 0) top right,
+      linear-gradient(315deg, transparent 5px, #737373 0) bottom right,
+      linear-gradient(45deg,  transparent 5px, #737373 0) bottom left;
+    background-size: 50.5% 50.5%;
+    background-repeat: no-repeat;
+    font-weight: 800;
+}
+
+.flextable-cell > h1,
+.flextable-cell > h2,
+.flextable-cell > h3,
+.flextable-cell > h4,
+.flextable-cell > h5,
+.flextable-cell > h6 {
+  margin: 0;
+}
+
+/* Table column sizing */
+
+.flextable--2cols > .flextable-cell {
+  width: 50%;
+}
+.flextable--3cols > .flextable-cell {
+  width: 33.33%;
+}
+.flextable--4cols > .flextable-cell {
+  width: 25%;
+}
+.flextable--5cols > .flextable-cell {
+  width: 20%;
+}
+.flextable--6cols > .flextable-cell {
+  width: 16.6%;
+}
+/* Font */
+
+html {
+  height: 100%;
+  background-color: #e1e1e1;
+}
+
+body {
+  box-sizing: border-box;
+  min-height: 100%;
+  margin: 0 auto;
+  padding: 2em;
+  max-width: 1000px;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 1.2em;
+  background-color: #334E58;
+  border-top: none;
+  border-bottom: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  color: #e1e1e1;
+}
+
+.heading h1 {
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+h4 {
+  font-size: 1em;
+}
